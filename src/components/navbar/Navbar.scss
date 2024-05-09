@@ -1,0 +1,113 @@
+@import '../../styles/mixins.scss';
+
+.navbar {
+    z-index: 1000;
+    padding: 0 2rem;
+
+    &__container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        @include respond(phone){
+            padding-block: 1rem;
+        }
+    }
+
+    &__logo {
+        img{
+            width: 120px;
+            height: 130px;  
+        }
+    }
+
+    &__flex {
+        display: flex;
+        flex: 1;
+
+        @include respond(tab-port) {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            align-items: center;
+            padding-block: 2rem;
+            gap: 1rem;
+            background-color: #f3ebe8;
+            animation: navAnimation 0.4s ease;
+        }
+
+    }
+    &__links {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        flex: 1;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+    }
+    li {
+        color: #374151;
+        font-weight: 500;
+        cursor: pointer;
+        transition: color 0.4s ease;
+
+        &:hover {
+            color: #ff7377;
+        } 
+    }
+    &__menu{
+        display: none;
+        cursor: pointer;
+        font-size: 1.6rem;
+        @include respond(tab-port) {
+            margin-left: auto;
+            display: grid;
+            place-content: center;
+            transition: all 0.4s ease;
+        }
+    }
+    .show-nav {
+        display: flex;
+    }
+    .bg-color{
+        color: #000;
+        border-radius: 0.5rem;
+    }
+}
+
+@keyframes navAnimation {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

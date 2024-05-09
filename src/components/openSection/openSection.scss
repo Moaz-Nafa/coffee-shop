@@ -1,0 +1,85 @@
+@import '../../styles/mixins.scss';
+
+.open {
+    padding-block: 4rem 8rem;
+
+    &__container{
+        padding-inline: 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 6rem;
+
+        @include respond(tab-port){
+            padding-inline: 1rem;
+        }
+    }
+    
+    &__first,
+    &__secound{
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7rem;
+    
+        @include respond(tab-land) {
+            gap: 5rem;
+        }
+    
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__text {
+        width: 80%;
+
+        @include respond(tab-port) {
+            width: 100%;
+            order: 1;
+        }
+    }
+
+    img {
+        width: 110%;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+
+    h2 {
+        font-size: 3rem;
+        letter-spacing: -0.025rem;
+        color: #111827;
+        line-height: 1.1;
+        font-weight: 700;
+        margin-bottom: 1.2rem;
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+        }
+    }
+     p {
+        color: #374151;
+        letter-spacing: -0.015rem;
+        font-size: 1.2rem;
+        line-height: 1.75;
+     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

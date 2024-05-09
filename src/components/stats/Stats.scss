@@ -1,0 +1,42 @@
+@import '../../styles/mixins.scss';
+
+.stats {
+    padding-block: 10rem;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4rem;
+        justify-content: space-evenly;
+        padding-inline: 4rem;
+        width: 65%;
+        @include respond(tab-port) {
+            padding-inline: 1rem;
+            justify-content: center;
+        }
+    }
+
+    &__point {
+        text-align: center;
+    }
+
+    h1 {
+        display: flex;
+        color: #ffc400;
+        justify-content: center;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+    }
+    
+    p {
+        font-weight: bold;
+        font-size: 1.5rem;
+        line-height: 1.75;
+        letter-spacing: -0.015rem;
+    }
+}

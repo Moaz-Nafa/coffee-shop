@@ -1,0 +1,62 @@
+@import "../../styles/mixins.scss";
+
+.hero {
+    padding-block: 3rem;
+    padding: 0 2.5rem;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 8rem;
+    
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+    h1 {
+        line-height: 1.1;
+        font-size: 6rem;
+        font-weight: 700;
+
+        @include respond(tab-port) {
+            font-size: 3.5rem;
+        }
+    }
+    span {
+        font-weight: 400;
+        padding: 0 0.4rem;
+    }
+    p {
+        padding-block: 1.5rem 3rem;
+    }
+    img {
+        width: 100%;
+    }
+    &__left {
+        @include respond(tab-port) {
+            text-align: center;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

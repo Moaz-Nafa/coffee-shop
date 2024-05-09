@@ -1,0 +1,31 @@
+// Media Querys Manager
+/*
+ 0 - 600 => phone
+ 600 - 900 => tablet prtreate
+ 900 - 1200 => tablet landscape
+ 1200 - 1800 => desktope
+
+ $breackpoints choises
+ -phone
+ -tab-port
+ -tab-land
+ -desktop
+*/
+
+@mixin respond($breakpoints) {
+    @if $breakpoints == phone {
+        @media screen and (max-width: 37.5em) {
+            @content;
+        }
+    }
+    @if $breakpoints == tab-port {
+        @media screen and (max-width: 56.25em) {
+            @content;
+        }
+    }
+    @if $breakpoints == tab-land {
+        @media screen and (max-width: 75em) {
+            
+        }
+    }
+}
